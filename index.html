@@ -306,7 +306,7 @@
 		$('#gform').on('submit', function(e) {
   		$('#gform *').fadeOut(2000);
 			 
-  		$('#gform').replaceWith($(<div id="thank-you" class="jumbotron text-center">
+  		$('#gform').prepend(
                 <h2 class="display-3" style="font-family: roboto slab; color: black;">Thank You!</h2>
                 <p class="lead" style="color: black;">for Contacting Us</p>
                 <hr>
@@ -314,7 +314,7 @@
                 <p class="lead">
                   <a class="btn btn-primary btn-sm" href="index.html" role="button">Continue to homepage</a>
                 </p>
-              </div>).html());
+              );
   		});
 		</script> 
 		</div>
