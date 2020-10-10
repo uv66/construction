@@ -38,7 +38,7 @@ $(document).ready(function(){
         })
         .done(function(data){
           console.log(data); // if getting done then call.
-        jQuery('#contact-form').replaceWith(jQuery('#thank-you').html());
+        jQuery('#gform').replaceWith(jQuery('#thank-you').html());
 
         })
         .fail(function() { // if fail then getting message
