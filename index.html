@@ -304,7 +304,7 @@
 		<script type="text/javascript">var submitted=false;</script>
 		<script type="text/javascript">
 		$('#gform').on('submit', function(e) {
-  		$('#gform *').fadeOut(2000);
+  		$('#gform *').fadeOut(100);
 			 
   		$('#gform').prepend("
                 <div id="thank-you" class="jumbotron text-center">
@@ -316,7 +316,7 @@
                   <a class="btn btn-primary btn-sm" href="index.html" role="button">Continue to homepage</a>
                 </p>
               </div>"
-              );
+              .html());
   		});
 		</script> 
 		</div>
