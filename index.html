@@ -284,30 +284,39 @@
               </div>
               <div id="contact-form">
   
-              <form action="mail.php" method="post" id ="contact" role="form" class="php-email-form">
+              <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSe0nowVGepowP0zuYksbndonXj6gSdJMTRC493SXedsSlPKpw/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
+
                 <div class="form-row">
                   <div class="col-md-6 form-group">
-                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                    <input type="text" name="entry.2077618504" class="form-control" id="entry.2077618504" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
                     <div class="validate"></div>
                   </div>
                   <div class="col-md-6 form-group">
-                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                    <input type="email" class="form-control" name="entry.927013364" id="entry.927013364" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
                     <div class="validate"></div>
                   </div>
                 </div>
                 <div class="form-group">
-                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                  <input type="text" class="form-control" name="entry.298915987" id="entry.298915987" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
                   <div class="validate"></div>
                 </div>
                 <div class="form-group">
-                  <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                  <textarea class="form-control" name="entry.1802678181" id="entry.1802678181" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
                   <div class="validate"></div>
                 </div>
              
                 <div class="text-center"><button type="submit">Send Message</button></div>
               </form>
               </div>
-  
+	      <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
+	      	<script src="assets/js/jquery.min.js"></script>
+		<script type="text/javascript">var submitted=false;</script>
+		<script type="text/javascript">
+		$('#gform').on('submit', function(e) {
+  		$('#gform *').fadeOut(2000);
+  		$('#gform').prepend('Your submission has been processed...');
+  		});
+		</script> 
             </div>
   
           </div>
