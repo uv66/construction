@@ -272,19 +272,6 @@
             </div> 
   
               <div class="col-lg-8 mt-5 mt-lg-0 " id="ccform"  data-aos="fade-left" data-aos-delay="100" >
-		 <script type="text/javascript">
-			$('#thank-you').hide();
-		 </script>
-		 <div id="thank-you" class="jumbotron text-center">
-                <h2 class="display-3" style="font-family: roboto slab; color: black;">Thank You!</h2>
-                <p class="lead" style="color: black;">for Contacting Us</p>
-                <hr>
-              
-                <p class="lead">
-                  <a class="btn btn-primary btn-sm" href="index.html" role="button">Continue to homepage</a>
-                </p>
-              </div> 
-
     
               <div id="contact-form">
   
@@ -318,6 +305,15 @@
 		<script type="text/javascript">
 		$('#gform').on('submit', function(e) {
   		$('#gform *').fadeOut(2000);
+			<div id="thank-you" class="jumbotron text-center">
+                <h2 class="display-3" style="font-family: roboto slab; color: black;">Thank You!</h2>
+                <p class="lead" style="color: black;">for Contacting Us</p>
+                <hr>
+              
+                <p class="lead">
+                  <a class="btn btn-primary btn-sm" href="index.html" role="button">Continue to homepage</a>
+                </p>
+              </div> 
   		$('#gform').replaceWith($('#thank-you').html());
   		});
 		</script> 
