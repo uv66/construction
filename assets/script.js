@@ -33,7 +33,7 @@ $(document).ready(function(){
     jQuery('#gform').submit(function(){
         jQuery.ajax({
         type: 'POST',
-        url: 'https://docs.google.com/forms/d/e/1FAIpQLSe0nowVGepowP0zuYksbndonXj6gSdJMTRC493SXedsSlPKpw/?',
+        url: 'https://docs.google.com/forms/d/e/1FAIpQLSe0nowVGepowP0zuYksbndonXj6gSdJMTRC493SXedsSlPKpw/formResponse?',
         data: jQuery(this).serialize() // getting filed value in serialize form
         })
         .done(function(data){
