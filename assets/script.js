@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $('#thank-you').hide();
+    
     $('.owl-carousel').owlCarousel({
         loop:true,
         margin:10,
@@ -21,10 +21,43 @@ $(document).ready(function(){
         }
     });
 
-    
+
     // -----------vailidation  contact----------//
- 
-   
+    jQuery('#name').keypress(function (evt) { 
+        var inputValue = (evt.which) ? evt.which : evt.keyCode;
+        if(!(inputValue >= 65 && inputValue <= 120) && (inputValue != 32 && inputValue != 0)  && inputValue != 46) { 
+         evt.preventDefault(); 
+    }
+ });
+    jQuery('#thank-you').hide();
+    jQuery('#gform').submit(function(){
+        jQuery.ajax({
+        type: 'POST',
+        url: 'https://docs.google.com/forms/d/e/1FAIpQLSe0nowVGepowP0zuYksbndonXj6gSdJMTRC493SXedsSlPKpw/?',
+        data: jQuery(this).serialize() // getting filed value in serialize form
+        })
+        .done(function(data){
+          console.log(data); // if getting done then call.
+        jQuery('#gform').replaceWith(jQuery('#thank-you').html());
+
+        })
+        .fail(function() { // if fail then getting message
+        // just in case posting your form failed
+        alert( "Po failed." );
+
+        });
+        // to prevent refreshing the whole page page
+        return false;
+        
+    });
+
+
+
+
+
+    
+
+
 
 
 }); 
