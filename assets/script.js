@@ -21,7 +21,7 @@ $(document).ready(function(){
         }
     });
 
-    jQuery('#thank-you').hide();
+    $('#thank-you').hide();
     // -----------vailidation  contact----------//
  
    
