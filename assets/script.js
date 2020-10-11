@@ -29,7 +29,7 @@ $(document).ready(function(){
          evt.preventDefault(); 
     }
  });
-    $('#thank-you').hide();
+    
     $('#gform').on('submit', function(e) {
         $('#gform *').fadeOut(2000);
         $('#gform').prepend($('#thank-you').html());
