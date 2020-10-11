@@ -91,30 +91,7 @@
     <!-- ------navbar -->
 
     <!-- ------------slider------ ---------->
-	<script type="text/javascript">
-		$(document).ready(function(){
-    
-    $('.owl-carousel').owlCarousel({
-        loop:true,
-        margin:10,
-        dots:false,
-        nav:true,
-        mouseDrag:false,
-        autoplay:true,
-        animateOut: 'slideOutUp',
-        responsive:{
-            0:{
-                items:1
-            },
-            600:{
-                items:1
-            },
-            800:{
-                items:1
-            }
-        }
-    });
-    </script>
+	
 
     <header  id="home">
         <div class="owl-carousel owl-theme ">
@@ -253,8 +230,7 @@
 
       </div>
     </section>
-
-      <!-- ======= Contact Section ======= -->
+<!-- ======= Contact Section ======= -->
       <section id="contact" class="contact" id="contact"  >
         <div class="container ">
   
@@ -295,49 +271,49 @@
   
             </div>
   
-            <div class="col-lg-8 mt-5 mt-lg-0 " id="ccform"  data-aos="fade-left" data-aos-delay="1300" >
-                
-                <div id="thank-you" class="jumbotron text-center">
-                <h2 class="display-3" style="font-family: roboto slab; color: black;">Thank You!</h2>
-                <p class="lead" style="color: black;">for Contacting Us</p>
-                <hr>
-              
-                <p class="lead">
-                  <a class="btn btn-primary btn-sm" href="index.html" role="button">Continue to homepage</a>
-                </p>
-              </div>
+            
               <div id="contact-form">
   
-              <form action="mail.php" method="post" id ="contact" role="form" class="php-email-form">
+              <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSe0nowVGepowP0zuYksbndonXj6gSdJMTRC493SXedsSlPKpw/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
+
                 <div class="form-row">
                   <div class="col-md-6 form-group">
-                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                    <input type="text" name="entry.2077618504" class="form-control" id="entry.2077618504" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
                     <div class="validate"></div>
                   </div>
                   <div class="col-md-6 form-group">
-                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                    <input type="email" class="form-control" name="entry.927013364" id="entry.927013364" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
                     <div class="validate"></div>
                   </div>
                 </div>
                 <div class="form-group">
-                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                  <input type="text" class="form-control" name="entry.298915987" id="entry.298915987" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
                   <div class="validate"></div>
                 </div>
                 <div class="form-group">
-                  <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                  <textarea class="form-control" name="entry.1802678181" id="entry.1802678181" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
                   <div class="validate"></div>
                 </div>
              
                 <div class="text-center"><button type="submit">Send Message</button></div>
               </form>
               </div>
-  
+	      <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
+		<script src="assets/js/jquery.min.js"></script>
+		<script type="text/javascript">var submitted=false;</script>
+		<script type="text/javascript">
+		$('#gform').on('submit', function(e) {
+  		$('#gform *').fadeOut(2000);
+  		$('#gform').prepend(('#thank-you').html());
+  		});
+		</script> 
             </div>
   
           </div>
   
         </div>
       </section><!-- End Contact Section -->
+
 
        <!-- ======= Footer ======= -->
   <footer id="footer">
