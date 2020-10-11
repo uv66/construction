@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    
+    $('#thank-you').hide();
     $('.owl-carousel').owlCarousel({
         loop:true,
         margin:10,
@@ -21,7 +21,7 @@ $(document).ready(function(){
         }
     });
 
-    $('#thank-you').hide();
+    
     // -----------vailidation  contact----------//
  
    
