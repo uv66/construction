@@ -33,7 +33,7 @@ $(document).ready(function(){
     jQuery('#gform').submit(function(){
       jQuery('#gform').on('submit', function(e) {
   		jQuery('#gform *').fadeOut(1000);
-  		jQuery('#gform').prepend(jQuery('#thank-you').html());
+  		jQuery('#gform').prepend('your submission has been processed');
 
   		});
         
