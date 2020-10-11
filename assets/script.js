@@ -21,10 +21,10 @@ $(document).ready(function(){
         }
     });
 
-
+    Jquery('#thank-you').hide();
     // -----------vailidation  contact----------//
  
-   Jquery('#thank-you').hide();
+   
 
 
 }); 
