@@ -31,23 +31,11 @@ $(document).ready(function(){
  });
     jQuery('#thank-you').hide();
     jQuery('#gform').submit(function(){
-        jQuery.ajax({
-        type: 'POST',
-        url: 'https://docs.google.com/forms/d/e/1FAIpQLSe0nowVGepowP0zuYksbndonXj6gSdJMTRC493SXedsSlPKpw/?',
-        data: jQuery(this).serialize() // getting filed value in serialize form
-        })
-        .done(function(data){
-          console.log(data); // if getting done then call.
-        jQuery('#gform').replaceWith(jQuery('#thank-you').html());
+      jQuery('#gform').on('submit', function(e) {
+  		jQuery('#gform *').fadeOut(1000);
+  		jQuery('#gform').prepend(jQuery('#thank-you').html());
 
-        })
-        .fail(function() { // if fail then getting message
-        // just in case posting your form failed
-        alert( "Po failed." );
-
-        });
-        // to prevent refreshing the whole page page
-        return false;
+  		});
         
     });
 
