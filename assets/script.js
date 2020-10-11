@@ -30,25 +30,7 @@ $(document).ready(function(){
     }
  });
     jQuery('#thank-you').hide();
-    jQuery('#contact').submit(function(){
-        jQuery.ajax({
-        type: 'POST',
-        url: 'mail.php',
-        data: jQuery(this).serialize() // getting filed value in serialize form
-        })
-        .done(function(data){
-          console.log(data); // if getting done then call.
-        jQuery('#contact-form').replaceWith(jQuery('#thank-you').html());
-
-        })
-        .fail(function() { // if fail then getting message
-        // just in case posting your form failed
-        alert( "Posting failed." );
-
-        });
-        // to prevent refreshing the whole page page
-        return false;
-    });
+    
 
 
 
