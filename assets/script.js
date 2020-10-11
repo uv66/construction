@@ -30,12 +30,7 @@ $(document).ready(function(){
     }
  });
     jQuery('#thank-you').hide();
-    jQuery('#gform').submit(function(){
-      jQuery('#gform').on('submit', function(e) {
-  		jQuery('#gform *').fadeOut(1000);
-  		jQuery('#gform').prepend('your submission has been processed');
-
-  		});
+    
         
     });
 
