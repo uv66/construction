@@ -23,17 +23,8 @@ $(document).ready(function(){
 
 
     // -----------vailidation  contact----------//
-    jQuery('#name').keypress(function (evt) { 
-        var inputValue = (evt.which) ? evt.which : evt.keyCode;
-        if(!(inputValue >= 65 && inputValue <= 120) && (inputValue != 32 && inputValue != 0)  && inputValue != 46) { 
-         evt.preventDefault(); 
-    }
- });
-    
-    $('#gform').on('submit', function(e) {
-        $('#gform *').fadeOut(2000);
-        $('#gform').prepend($('#thank-you').html());
-        });
+ 
+   Jquery('#thank-you').hide()
 
 
 }); 
