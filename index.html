@@ -314,7 +314,8 @@
 		<script type="text/javascript">
 		$('#gform').on('submit', function(e) {
   		$('#gform *').fadeOut(1000);
-  		$('#thank-you').show();
+  		$('#gform').prepend(('#thank-you').html());
+
   		});
 		</script>
             </div>
