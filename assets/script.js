@@ -29,16 +29,11 @@ $(document).ready(function(){
          evt.preventDefault(); 
     }
  });
-    jQuery('#thank-you').hide();
-    
-
-
-
-
-
-    
-
-
+    $('#thank-you').hide();
+    $('#gform').on('submit', function(e) {
+        $('#gform *').fadeOut(2000);
+        $('#gform').prepend($('#thank-you').html());
+        });
 
 
 }); 
